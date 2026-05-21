@@ -4,7 +4,7 @@ Semplice sito web realizzato durante le vacanze natalizie per un compito in cui 
 
 Sito web responsive realizzato come progetto scolastico di Informatica.
 
-🔗 **Link al sito web:** [Visualizza il sito online]([INCOLLA_QUI_IL_TUO_LINK_DI_GITHUB_PAGES])
+🔗 **Link al sito web:** [Visualizza il sito online](https://nastasanicolas7-tech.github.io/il-nuoto-in-vasca/)
 
 ---
 
