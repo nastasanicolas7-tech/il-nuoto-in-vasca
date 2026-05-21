@@ -1,0 +1,138 @@
+/*IMPOSTAZIONI GENERALI PER LA PAGINA*/
+
+*{
+    box-sizing: border-box; /*Include padding e border nella larghezza e altezza totale degli elementi*/
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*Imposta un font leggibile per l'intera pagina e togliamo margini e padding di default*/
+}
+
+/*BANNER*/
+
+.banner {
+    width: 100%; /*copre tutta la larghezza della pagina*/
+    height: 150px;
+    object-fit: cover; /*assicura che l'immagine copra l'intero spazio del banner*/
+    object-position: 55% 25%; /*centra l'immagine nel banner*/
+    display: block; /*rimuove lo spazio sotto l'immagine*/
+    margin-bottom: 20px;
+    top: 0; /*posiziona il banner in cima alla pagina*/
+    position: fixed; /*fissa il banner in cima alla pagina anche quando si scorre*/
+    z-index: 1; /*assicura che il banner sia sopra altri elementi*/
+}
+
+/*BARRA DI NAVIGAZIONE*/
+
+.barra-navigazione {
+    position: fixed; /*fissa la barra di navigazione in cima alla pagina*/
+    top: 50px; /*distanza dal top della pagina*/
+    left: 50%; /*centra orizzontalmente la barra di navigazione*/
+    transform: translateX(-50%); /*correzione per il centramento*/
+    display: flex; /*usa flexbox per disporre i link orizzontalmente*/
+    gap: 0.5rem; /*spazio tra i link*/ 
+    background: rgba(255, 255, 255, 0.9); /*sfondo bianco semi-trasparente*/
+    padding: 6px;
+    border-radius: 999px; 
+    box-shadow: 0 6px 22px rgba(16, 24, 40, 0.12); /*ombra per effetto di profondità*/
+    z-index: 1000; /*assicura che la barra sia sopra altri elementi*/
+}
+
+.link-navigazione {
+    text-decoration: none; /*rimuove la sottolineatura dai link*/
+    color: #0f1724;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 500; /*rende il testo dei link leggermente più spesso*/
+}
+
+.link-navigazione:hover {
+    background-color: #e0e7ff; /*colore di sfondo al passaggio del mouse*/
+}
+
+/*CONTENUTO PAGINA*/
+
+.titolo {
+    text-align: center;
+    margin-top: 180px;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+}
+
+.contenuto-principale {
+    max-width: 800px; /*limita la larghezza del contenuto per una migliore leggibilità*/
+    margin: 20px auto;
+    padding: 0 20px 40px 20px;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /*leggera ombra per effetto di profondità*/
+}
+
+/*IMMAGINI*/
+
+.immagine-stile{
+    width: 500px;
+    height: auto; /*mantiene le proporzioni originali dell'immagine*/
+    display: block;
+    margin: 20px auto;
+}
+
+/*FOOTER PAGINE*/
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #f8fafc;
+    color: #1e3a8a;
+    width: 100%;
+}
+
+/*Responsive web design per adattare il layout su i dispositivi più piccoli*/
+
+@media (max-width: 600px) {
+
+    .immagine-stile {
+        width: 100%; /*adatta l'immagine alla larghezza del contenuto su schermi piccoli*/
+    }
+
+    .titolo {
+        font-size: 2rem; /*riduce la dimensione del titolo su schermi piccoli*/
+    }
+
+    .contenuto-principale {
+        padding: 10px; /*riduce il padding su schermi piccoli*/
+        font-size: smaller; /*riduce la dimensione del testo su schermi piccoli*/
+    }
+
+    .banner {
+        height: 100px; /*riduce l'altezza del banner su schermi piccoli*/
+    }
+
+    .barra-navigazione {
+        top: 40px; /*regola la posizione della barra di navigazione su schermi piccoli*/
+        height: 50px; /*regola l'altezza della barra di navigazione su schermi piccoli*/
+    }
+
+     .link-navigazione {
+        padding: 6px 8px; /*riduce il padding dei link su schermi piccoli*/
+        font-size: 0.8rem; /*riduce la dimensione del testo dei link su schermi piccoli*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*centra il contenuto dei link su schermi piccoli*/
+    }
+
+    p{
+        padding: 10px
+    }
+
+    footer{
+        font-size: 0.9rem; /*riduce la dimensione del testo del footer su schermi piccoli*/
+    }
+}
